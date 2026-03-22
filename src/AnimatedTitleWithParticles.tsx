@@ -68,6 +68,19 @@ const AnimatedTitleWithParticles: React.FC = () => {
           {idx < lines.length - 1 && <br />}
         </React.Fragment>
       ))}
+      {/* Texto adicional debajo del título */}
+      {!typing && (
+        <div style={{
+          marginTop: isMobile ? 12 : 18,
+          fontSize: isMobile ? "1.25em" : "1.15em",
+          color: "#fffbe6",
+          textShadow: "0 2px 8px #e67e22, 0 0px 32px #fffde4",
+          fontWeight: 700,
+          letterSpacing: "1.2px"
+        }}>
+          Ya firmaste, ¡nos casamos!
+        </div>
+      )}
       {/* Partículas animadas sobre el texto */}
       {typing && <ParticlesFromText key={particleKey} />}
     </div>
