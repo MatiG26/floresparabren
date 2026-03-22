@@ -30,7 +30,7 @@ function App() {
   const [hasSignature, setHasSignature] = React.useState(false);
 
   // Funciones para dibujar en el canvas
-  const startDrawing = (e: React.MouseEvent | React.TouchEvent) => {
+  const startDrawing = () => {
     setIsDrawing(true);
   };
   const endDrawing = () => {
