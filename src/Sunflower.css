@@ -49,3 +49,21 @@
   box-shadow: 0 2px 8px 0 #ffe06660;
   z-index: 5;
 }
+
+@media (max-width: 600px) {
+  .sunflower-single-petal {
+    background: #ffe066;
+    box-shadow: none !important;
+    filter: none !important;
+    border: 1px solid #ffd700;
+  }
+  .sunflower-single-center {
+    background: #a67c2e;
+    box-shadow: none !important;
+    border: 2px solid #ffe066cc;
+  }
+  .sunflower-single-inner {
+    background: #ffe066;
+    box-shadow: none !important;
+  }
+}

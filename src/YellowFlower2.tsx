@@ -73,7 +73,7 @@ const YellowFlower2: React.FC<{
         style={{
           position: "absolute",
           left: "50%",
-          bottom: 0,
+          bottom: 45,
           transform: "translateX(-50%)",
           width: 12,
           height: 210 * stemPercent, // más alto
@@ -91,7 +91,7 @@ const YellowFlower2: React.FC<{
             style={{
               position: "absolute",
               left: i % 2 === 0 ? "100%" : "-60%",
-              top: `${30 + i*25}px`,
+              top: `${70 + i*25}px`,
               width: 32,
               height: 18,
               background: "linear-gradient(90deg, #7bb661 60%, #3e5c13 100%)",
@@ -111,7 +111,7 @@ const YellowFlower2: React.FC<{
           position: "absolute",
           left: "50%",
           zIndex: 1,
-          top: -150, // más abajo
+          top: -200, // más abajo
           transform: "translateX(-50%)",
         }}
       >

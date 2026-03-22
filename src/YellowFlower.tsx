@@ -19,9 +19,9 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
   // Key para reiniciar partículas
   const [particleKey, setParticleKey] = React.useState(0);
   React.useEffect(() => {
+    let frame: number;
     if (animateStem) {
       const start = Date.now();
-      let frame: number;
       const grow = () => {
         const elapsed = Date.now() - start;
         const percent = Math.min(elapsed / STEM_GROW_DURATION, 1);
@@ -41,11 +41,12 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
   // Loop de partículas mientras la flor está abierta
   React.useEffect(() => {
     let interval: number | undefined;
+    const isMobile = window.innerWidth <= 600;
     if (finishFlower) {
       setParticleKey(0); // reset al abrir
       interval = window.setInterval(() => {
         setParticleKey(k => k + 1);
-      }, 1800); // cada 1.8s (igual que la animación de partículas)
+      }, isMobile ? 3200 : 1800); // menos partículas en móvil
     }
     return () => {
       if (interval) window.clearInterval(interval);
@@ -72,7 +73,7 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
         style={{
           position: "absolute",
           left: "50%",
-          bottom: 0,
+          bottom: 45,
           transform: "translateX(-50%)",
           width: 12,
           height: 300 * stemPercent, // Taller than the other two
@@ -90,7 +91,7 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
             style={{
               position: "absolute",
               left: i % 2 === 0 ? "100%" : "-60%",
-              top: `${30 + i*25}px`,
+              top: `${80 + i*25}px`,
               width: 32,
               height: 18,
               background: "linear-gradient(90deg, #7bb661 60%, #3e5c13 100%)",
@@ -107,7 +108,7 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
       <div style={{
         position: "absolute",
         left: "50%",
-        bottom: -18,
+        bottom: 40,
         transform: "translateX(-50%)",
         width: 80,
         height: 40,
@@ -146,7 +147,7 @@ const YellowFlower: React.FC<SunflowerProps> = ({ animateStem = false }) => {
           position: "absolute",
           left: "50%",
           zIndex: 1,
-          top: -250, // más abajo
+          top: -300, // más abajo
           transform: "translateX(-50%)",
         }}
       >

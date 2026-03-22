@@ -82,3 +82,76 @@
   60% { opacity: 1; filter: blur(0.2px); }
   100% { left: 20px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
 }
+
+@media (max-width: 600px) {
+  .sunflower-particle {
+    background: #ffe066;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+  .sunflower-particle--1,
+  .sunflower-particle--2,
+  .sunflower-particle--3,
+  .sunflower-particle--4,
+  .sunflower-particle--5,
+  .sunflower-particle--6,
+  .sunflower-particle--7,
+  .sunflower-particle--8,
+  .sunflower-particle--9 {
+    animation-duration: 1.2s !important;
+  }
+  @keyframes sunflower-particle-anim-1 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: -60px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-2 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: 0px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-3 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: 60px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-4 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: -40px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-5 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: 40px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-6 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: -80px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-7 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: 80px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-8 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: -20px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+  @keyframes sunflower-particle-anim-9 {
+    0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: none; }
+    20% { opacity: 1; filter: none; }
+    60% { opacity: 1; filter: none; }
+    100% { left: 20px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: none; }
+  }
+}

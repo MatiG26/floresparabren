@@ -35,3 +35,31 @@
     filter: blur(2px);
   }
 }
+@media (max-width: 600px) {
+  .floating-heart {
+    filter: none !important;
+    box-shadow: 0 0 8px 2px #fff3fa, 0 0 4px 1px #ffb6c1 !important;
+    opacity: 0.7 !important;
+    border-radius: 50%;
+  }
+  @keyframes floating-heart-anim {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.7) rotate(var(--angle, 0deg));
+      filter: none;
+    }
+    10% {
+      opacity: 0.7;
+      filter: none;
+    }
+    80% {
+      opacity: 0.7;
+      filter: none;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-92vh) scale(1.1) rotate(var(--angle, 0deg));
+      filter: none;
+    }
+  }
+}

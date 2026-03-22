@@ -51,15 +51,26 @@
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1126px;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+  #root {
+    padding: 0 4vw;
+    border-inline: none;
+    min-height: 100vh;
+  }
 }
 
 body {

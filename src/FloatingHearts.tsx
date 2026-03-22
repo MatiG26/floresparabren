@@ -1,7 +1,8 @@
 import React from "react";
 import "./FloatingHearts.css";
 
-const HEART_COUNT = 18;
+const isMobile = window.innerWidth <= 600;
+const HEART_COUNT = isMobile ? 8 : 18;
 const COLORS = ["#ff69b4", "#ffb6c1", "#ff85a1", "#ff4fa3", "#ffb3de"];
 
 function randomBetween(a: number, b: number) {
