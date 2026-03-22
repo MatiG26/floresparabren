@@ -1,0 +1,59 @@
+.sunflower-leaves {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+.sunflower-leaf {
+  position: absolute;
+  width: 32px;
+  height: 18px;
+  background: linear-gradient(90deg, #7bb661 60%, #3e5c13 100%);
+  border-radius: 60% 40% 60% 40% / 60% 60% 40% 40%;
+  opacity: 0;
+  transform: scale(0.2);
+  transition: opacity 0.3s, transform 0.5s;
+}
+.sunflower-leaves-bloom .sunflower-leaf {
+  opacity: 1;
+  transform: scale(1);
+}
+.sunflower-leaf--1 {
+  left: -18px;
+  bottom: 10px;
+  transform: rotate(-30deg) scale(0.2);
+  transition-delay: 0.3s;
+}
+.sunflower-leaves-bloom .sunflower-leaf--1 {
+  transform: rotate(-30deg) scale(1);
+}
+.sunflower-leaf--2 {
+  left: 18px;
+  bottom: 10px;
+  transform: rotate(30deg) scale(0.2);
+  transition-delay: 0.45s;
+}
+.sunflower-leaves-bloom .sunflower-leaf--2 {
+  transform: rotate(30deg) scale(1);
+}
+.sunflower-leaf--3 {
+  left: -10px;
+  bottom: -2px;
+  transform: rotate(-10deg) scale(0.2);
+  transition-delay: 0.6s;
+}
+.sunflower-leaves-bloom .sunflower-leaf--3 {
+  transform: rotate(-10deg) scale(1);
+}
+.sunflower-leaf--4 {
+  left: 10px;
+  bottom: -2px;
+  transform: rotate(10deg) scale(0.2);
+  transition-delay: 0.75s;
+}
+.sunflower-leaves-bloom .sunflower-leaf--4 {
+  transform: rotate(10deg) scale(1);
+}

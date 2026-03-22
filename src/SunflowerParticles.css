@@ -1,0 +1,84 @@
+.sunflower-particles {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+.sunflower-particle {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe066 60%, #fffde4 100%);
+  opacity: 0;
+  animation: sunflower-particle-anim 1.6s cubic-bezier(.7,1.7,.5,1) forwards;
+}
+.sunflower-particle--1 { animation-delay: 0.05s; left: -60px; animation-name: sunflower-particle-anim-1; }
+.sunflower-particle--2 { animation-delay: 0.15s; left: 0px; animation-name: sunflower-particle-anim-2; }
+.sunflower-particle--3 { animation-delay: 0.25s; left: 60px; animation-name: sunflower-particle-anim-3; }
+.sunflower-particle--4 { animation-delay: 0.10s; left: -40px; animation-name: sunflower-particle-anim-4; }
+.sunflower-particle--5 { animation-delay: 0.20s; left: 40px; animation-name: sunflower-particle-anim-5; }
+.sunflower-particle--6 { animation-delay: 0.30s; left: -80px; animation-name: sunflower-particle-anim-6; }
+.sunflower-particle--7 { animation-delay: 0.35s; left: 80px; animation-name: sunflower-particle-anim-7; }
+.sunflower-particle--8 { animation-delay: 0.18s; left: -20px; animation-name: sunflower-particle-anim-8; }
+.sunflower-particle--9 { animation-delay: 0.28s; left: 20px; animation-name: sunflower-particle-anim-9; }
+
+@keyframes sunflower-particle-anim-1 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: -60px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-2 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: 0px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-3 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: 60px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-4 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: -40px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-5 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: 40px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-6 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: -80px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-7 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: 80px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-8 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: -20px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}
+@keyframes sunflower-particle-anim-9 {
+  0% { left: 0; opacity: 0; transform: translateY(0) scale(0.7); filter: blur(0.5px); }
+  20% { opacity: 1; filter: blur(0.2px); }
+  60% { opacity: 1; filter: blur(0.2px); }
+  100% { left: 20px; opacity: 0; transform: translateY(-70px) scale(1.2); filter: blur(2px); }
+}

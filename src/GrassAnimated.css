@@ -1,0 +1,49 @@
+/* Animaciones y estilos para el pasto animado tipo CSS puro */
+.grass-strip {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 90px;
+  z-index: 10;
+  pointer-events: none;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.grass-blade {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 0;
+  background: linear-gradient(to top, #00b815 60%, #4e8c2b 100%);
+  border-radius: 0 0 12px 12px;
+  opacity: 0.85;
+  transform: scaleY(0);
+  animation: grass-blade-grow 1.2s var(--delay, 0s) cubic-bezier(.7,1.7,.5,1) forwards;
+}
+.grass-blade--1 { left: 10vw; --delay: 0.1s; height: 60px; }
+.grass-blade--2 { left: 20vw; --delay: 0.3s; height: 80px; }
+.grass-blade--3 { left: 30vw; --delay: 0.2s; height: 70px; }
+.grass-blade--4 { left: 40vw; --delay: 0.4s; height: 90px; }
+.grass-blade--5 { left: 50vw; --delay: 0.15s; height: 75px; }
+.grass-blade--6 { left: 60vw; --delay: 0.35s; height: 85px; }
+.grass-blade--7 { left: 70vw; --delay: 0.25s; height: 65px; }
+.grass-blade--8 { left: 80vw; --delay: 0.5s; height: 95px; }
+.grass-blade--9 { left: 90vw; --delay: 0.2s; height: 60px; }
+
+@keyframes grass-blade-grow {
+  0% {
+    height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

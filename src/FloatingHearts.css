@@ -1,0 +1,37 @@
+.floating-hearts-container {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: visible;
+}
+.floating-heart {
+  position: absolute;
+  bottom: -40px;
+  opacity: 0.38;
+  animation: floating-heart-anim linear infinite;
+  will-change: transform, opacity;
+}
+@keyframes floating-heart-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.7) rotate(var(--angle, 0deg));
+    filter: blur(0.5px);
+  }
+  10% {
+    opacity: 0.38;
+    filter: blur(0.2px);
+  }
+  80% {
+    opacity: 0.38;
+    filter: blur(0.2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-92vh) scale(1.1) rotate(var(--angle, 0deg));
+    filter: blur(2px);
+  }
+}

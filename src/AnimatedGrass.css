@@ -1,0 +1,246 @@
+/* Pasto animado tipo ejemplo */
+.growing-grass {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 18vmin;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: visible;
+}
+.flower__grass {
+  --c: #00b815;
+  --line-w: 1.5vmin;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 20;
+  transform-origin: bottom center;
+  width: 18vmin;
+  height: 18vmin;
+}
+.flower__grass--1 {
+  transform: rotate(-48deg) rotateY(40deg);
+  animation: moving-grass 2s linear infinite;
+}
+.flower__grass--2 {
+  left: 2vmin;
+  bottom: 2vmin;
+  transform: scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg);
+  opacity: 0.8;
+  z-index: 0;
+  animation: moving-grass--2 1.5s linear infinite;
+}
+.flower__grass--top {
+  width: 7vmin;
+  height: 10vmin;
+  border-top-right-radius: 100%;
+  border-right: var(--line-w) solid var(--c);
+  transform-origin: bottom center;
+  transform: rotate(-2deg);
+}
+.flower__grass--bottom {
+  margin-top: -2px;
+  width: var(--line-w);
+  height: 25vmin;
+  background-image: linear-gradient(to top, transparent, var(--c));
+}
+.flower__grass__leaf {
+  --size: 10vmin;
+  position: absolute;
+  width: calc(var(--size) * 2.1);
+  height: var(--size);
+  border-top-left-radius: var(--size);
+  border-top-right-radius: var(--size);
+  background-image: linear-gradient(to top, transparent, transparent 30%, var(--c));
+  z-index: 100;
+}
+.flower__grass__leaf--1 {
+  top: -6%;
+  left: 30%;
+  --size: 6vmin;
+  transform: rotate(-20deg);
+  animation: growing-grass-ans--1 2s 2.6s backwards;
+}
+.flower__grass__leaf--2 {
+  top: -5%;
+  left: -110%;
+  --size: 6vmin;
+  transform: rotate(10deg);
+  animation: growing-grass-ans--2 2s 2.4s linear backwards;
+}
+.flower__grass__leaf--3 {
+  top: 5%;
+  left: 60%;
+  --size: 8vmin;
+  transform: rotate(-18deg) rotateX(-20deg);
+  animation: growing-grass-ans--3 2s 2.2s linear backwards;
+}
+.flower__grass__leaf--4 {
+  top: 6%;
+  left: -135%;
+  --size: 8vmin;
+  transform: rotate(2deg);
+  animation: growing-grass-ans--4 2s 2s linear backwards;
+}
+.flower__grass__leaf--5 {
+  top: 20%;
+  left: 60%;
+  --size: 10vmin;
+  transform: rotate(-24deg) rotateX(-20deg);
+  animation: growing-grass-ans--5 2s 1.8s linear backwards;
+}
+.flower__grass__leaf--6 {
+  top: 22%;
+  left: -180%;
+  --size: 10vmin;
+  transform: rotate(10deg);
+  animation: growing-grass-ans--6 2s 1.6s linear backwards;
+}
+.flower__grass__leaf--7 {
+  top: 39%;
+  left: 70%;
+  --size: 10vmin;
+  transform: rotate(-10deg);
+  animation: growing-grass-ans--7 2s 1.4s linear backwards;
+}
+.flower__grass__leaf--8 {
+  top: 40%;
+  left: -215%;
+  --size: 11vmin;
+  transform: rotate(10deg);
+  animation: growing-grass-ans--8 2s 1.2s linear backwards;
+}
+.flower__grass__overlay {
+  position: absolute;
+  top: -10%;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: blur(1.5vmin);
+  z-index: 100;
+}
+.real-grass-blade {
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 60px;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(to top, #3e5c13 0%, #7bb661 80%, #b6e67d 100%);
+  opacity: 0.85;
+  transform: scaleY(0.2) rotate(var(--angle, 0deg));
+  animation: real-grass-blade-grow 1.2s var(--delay, 0s) cubic-bezier(.7,1.7,.5,1) forwards;
+  z-index: 5;
+}
+.growing-grass.short-grass {
+  height: 38px;
+}
+.real-grass-blade.short-beauty {
+  border-radius: 0 0 8px 8px;
+  will-change: height, opacity, transform;
+  animation: real-grass-blade-grow-short 1.1s var(--delay, 0s) cubic-bezier(.7,1.7,.5,1) forwards;
+  transform: scaleY(0) rotate(var(--angle, 0deg));
+  opacity: 0;
+  background: linear-gradient(to top, #7ed957 60%, #eaffd0 100%);
+  box-shadow: 0 2px 6px 0 #3e5c1320;
+}
+@keyframes moving-grass {
+  0%, 100% {
+    transform: rotate(-48deg) rotateY(40deg);
+  }
+  50% {
+    transform: rotate(-50deg) rotateY(40deg);
+  }
+}
+@keyframes moving-grass--2 {
+  0%, 100% {
+    transform: scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(79deg) rotateX(10deg) rotateY(-200deg);
+  }
+}
+@keyframes growing-grass-ans--1 {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-20deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--2 {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(10deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--3 {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-18deg) rotateX(-20deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--4 {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(2deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--5 {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-24deg) rotateX(-20deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--6 {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(10deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--7 {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-10deg) scale(0);
+  }
+}
+@keyframes growing-grass-ans--8 {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(10deg) scale(0);
+  }
+}
+@keyframes real-grass-blade-grow {
+  0% {
+    height: 0;
+    opacity: 0;
+    transform: scaleY(0) rotate(var(--angle, 0deg));
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) rotate(var(--angle, 0deg));
+  }
+}
+@keyframes real-grass-blade-grow-short {
+  0% {
+    height: 0;
+    opacity: 0;
+    transform: scaleY(0) rotate(var(--angle, 0deg));
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) rotate(var(--angle, 0deg));
+  }
+}

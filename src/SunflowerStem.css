@@ -1,0 +1,13 @@
+/* Solo estilos visuales, sin animaciones */
+.sunflower-stem-realistic {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 16px;
+  height: 240px;
+  background: linear-gradient(180deg, #7bb661 60%, #3e5c13 100%);
+  border-radius: 8px 8px 18px 18px / 8px 8px 30px 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px 0 #3e5c1340;
+  z-index: 1;
+}

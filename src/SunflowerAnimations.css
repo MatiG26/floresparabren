@@ -1,0 +1,76 @@
+/* Animación para el grupo completo (tallo + flor) */
+.sunflower-animated-group {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  height: 100%;
+  transform: translateX(-50%);
+  animation: sunflower-flower-follow 6s ease-in-out 0.5s infinite alternate;
+  transform-origin: bottom center;
+}
+@keyframes sunflower-flower-follow {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  40% { transform: translateX(-50%) rotate(3deg); }
+  60% { transform: translateX(-50%) rotate(-3deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+/* Center bloom animation */
+.sunflower-flower-center-bloom .sunflower-single-center {
+  animation: sunflower-center-bloom 0.5s cubic-bezier(.7,1.7,.5,1) forwards;
+}
+@keyframes sunflower-center-bloom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Petals bloom animation */
+.sunflower-flower-petals-bloom .sunflower-single-petal {
+  opacity: 0;
+  animation: sunflower-petal-bloom 0.6s cubic-bezier(.7,1.7,.5,1) forwards;
+}
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(1) { animation-delay: 0.00s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(2) { animation-delay: 0.04s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(3) { animation-delay: 0.08s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(4) { animation-delay: 0.12s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(5) { animation-delay: 0.16s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(6) { animation-delay: 0.20s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(7) { animation-delay: 0.24s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(8) { animation-delay: 0.28s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(9) { animation-delay: 0.32s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(10) { animation-delay: 0.36s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(11) { animation-delay: 0.40s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(12) { animation-delay: 0.44s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(13) { animation-delay: 0.48s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(14) { animation-delay: 0.52s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(15) { animation-delay: 0.56s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(16) { animation-delay: 0.60s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(17) { animation-delay: 0.64s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(18) { animation-delay: 0.68s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(19) { animation-delay: 0.72s; }
+.sunflower-flower-petals-bloom .sunflower-single-petal:nth-child(20) { animation-delay: 0.76s; }
+@keyframes sunflower-petal-bloom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2, 0.2) rotate(var(--petal-rot, 0deg));
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1, 1.2) rotate(var(--petal-rot, 0deg));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1.1) rotate(var(--petal-rot, 0deg));
+  }
+}

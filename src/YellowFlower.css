@@ -1,0 +1,572 @@
+.rose-flower-container {
+  position: absolute;
+  width: 220px;
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.rose-shadow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 120px;
+  height: 36px;
+  background: radial-gradient(ellipse at center, #bfa10040 0%, #fff0 80%);
+  border-radius: 50%;
+  transform: translateX(-50%) scaleX(1.3);
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.rose-stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 16px;
+  height: 210px;
+  background: linear-gradient(180deg, #7bb661 60%, #3e5c13 100%);
+  border-radius: 12px 12px 18px 18px / 12px 12px 30px 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px 0 #3e5c1340;
+  z-index: 1;
+}
+
+/* Pétalos externos grandes */
+.rose-petal-ext {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  width: 120px;
+  height: 140px;
+  background: radial-gradient(circle at 60% 20%, #fffde4 10%, #ffe066 60%, #e6b800 100%);
+  border-radius: 60% 60% 80% 80% / 80% 80% 100% 100%;
+  box-shadow: 0 8px 32px 0 #bfa10040, 0 2px 8px #e6b80060;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 8px #bfa10060);
+  z-index: 2;
+}
+.rose-petal-ext-1 { transform: translate(-50%, -50%) rotate(-18deg) scale(1.1, 1.13); }
+.rose-petal-ext-2 { transform: translate(-50%, -50%) rotate(27deg) scale(1.08, 1.12); }
+.rose-petal-ext-3 { transform: translate(-50%, -50%) rotate(72deg) scale(1.08, 1.12); }
+.rose-petal-ext-4 { transform: translate(-50%, -50%) rotate(117deg) scale(1.1, 1.13); }
+
+/* Pétalos intermedios */
+.rose-petal-mid {
+  position: absolute;
+  left: 50%;
+  top: 130px;
+  width: 90px;
+  height: 100px;
+  background: radial-gradient(circle at 60% 20%, #fffde4 20%, #ffe066 70%, #e6b800 100%);
+  border-radius: 60% 60% 80% 80% / 80% 80% 100% 100%;
+  box-shadow: 0 4px 16px 0 #bfa10040, 0 2px 8px #e6b80060;
+  opacity: 0.97;
+  filter: drop-shadow(0 2px 8px #bfa10060);
+  z-index: 3;
+}
+.rose-petal-mid-1 { transform: translate(-50%, -50%) rotate(0deg) scale(1.05, 1.08); }
+.rose-petal-mid-2 { transform: translate(-50%, -50%) rotate(45deg) scale(1.03, 1.07); }
+.rose-petal-mid-3 { transform: translate(-50%, -50%) rotate(90deg) scale(1.05, 1.08); }
+
+/* Pétalos internos enrollados */
+.rose-petal-int {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  width: 54px;
+  height: 60px;
+  background: radial-gradient(circle at 60% 20%, #fffde4 40%, #ffe066 80%, #e6b800 100%);
+  border-radius: 60% 60% 80% 80% / 80% 80% 100% 100%;
+  box-shadow: 0 2px 8px 0 #bfa10040;
+  opacity: 0.98;
+  filter: drop-shadow(0 1px 4px #bfa10060);
+  z-index: 4;
+}
+.rose-petal-int-1 { transform: translate(-50%, -50%) rotate(-10deg) scale(1.05, 1.1); }
+.rose-petal-int-2 { transform: translate(-50%, -50%) rotate(20deg) scale(1.05, 1.1); }
+
+.rose-center {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle at 60% 40%, #fffde4 10%, #ffe066 60%, #e6b800 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px 0 #bfa10060;
+  z-index: 5;
+  filter: brightness(1.13);
+  border: 1.5px solid #fffbe6cc;
+}
+
+/* Detalles de brillo y borde */
+.rose-petal {
+  border: 1.5px solid #fffbe6cc;
+}
+.rose-center {
+  border: 2px solid #fffbe6cc;
+}
+
+/* Bouquet wrapper para posicionar flores correctamente */
+.bouquet-wrapper {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Girasol */
+.sunflower-container {
+  position: absolute;
+  width: 160px;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: auto;
+}
+.sunflower-shadow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 80px;
+  height: 24px;
+  background: radial-gradient(ellipse at center, #bfa10040 0%, #fff0 80%);
+  border-radius: 50%;
+  transform: translateX(-50%) scaleX(1.1);
+  z-index: 0;
+  filter: blur(3px);
+}
+.sunflower-stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  height: 120px;
+  background: linear-gradient(180deg, #7bb661 60%, #3e5c13 100%);
+  border-radius: 10px 10px 18px 18px / 10px 10px 30px 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px 0 #3e5c1340;
+  z-index: 1;
+}
+.sunflower-petal {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 38px;
+  height: 80px;
+  background: radial-gradient(circle at 60% 20%, #fffde4 5%, #ffe066 60%, #e6b800 100%);
+  border-radius: 60% 60% 80% 80% / 80% 80% 100% 100%;
+  box-shadow: 0 4px 16px 0 #bfa10040;
+  z-index: 2;
+  opacity: 0.93;
+  filter: drop-shadow(0 2px 8px #bfa10060);
+  transform-origin: 50% 90%;
+}
+.sunflower-petal-1 { transform: translate(-50%, -50%) rotate(0deg) scale(1, 1.1); }
+.sunflower-petal-2 { transform: translate(-50%, -50%) rotate(22.5deg) scale(1, 1.1); }
+.sunflower-petal-3 { transform: translate(-50%, -50%) rotate(45deg) scale(1, 1.1); }
+.sunflower-petal-4 { transform: translate(-50%, -50%) rotate(67.5deg) scale(1, 1.1); }
+.sunflower-petal-5 { transform: translate(-50%, -50%) rotate(90deg) scale(1, 1.1); }
+.sunflower-petal-6 { transform: translate(-50%, -50%) rotate(112.5deg) scale(1, 1.1); }
+.sunflower-petal-7 { transform: translate(-50%, -50%) rotate(135deg) scale(1, 1.1); }
+.sunflower-petal-8 { transform: translate(-50%, -50%) rotate(157.5deg) scale(1, 1.1); }
+.sunflower-petal-9 { transform: translate(-50%, -50%) rotate(180deg) scale(1, 1.1); }
+.sunflower-petal-10 { transform: translate(-50%, -50%) rotate(202.5deg) scale(1, 1.1); }
+.sunflower-petal-11 { transform: translate(-50%, -50%) rotate(225deg) scale(1, 1.1); }
+.sunflower-petal-12 { transform: translate(-50%, -50%) rotate(247.5deg) scale(1, 1.1); }
+.sunflower-petal-13 { transform: translate(-50%, -50%) rotate(270deg) scale(1, 1.1); }
+.sunflower-petal-14 { transform: translate(-50%, -50%) rotate(292.5deg) scale(1, 1.1); }
+.sunflower-petal-15 { transform: translate(-50%, -50%) rotate(315deg) scale(1, 1.1); }
+.sunflower-petal-16 { transform: translate(-50%, -50%) rotate(337.5deg) scale(1, 1.1); }
+.sunflower-center {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 60% 40%, #a67c2e 10%, #6b4f1d 80%, #3e2a0f 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px 0 #a67c2e80;
+  z-index: 4;
+  border: 2px solid #ffe066cc;
+}
+.sunflower-inner {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 60% 40%, #ffe066 10%, #a67c2e 80%, #6b4f1d 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px 0 #ffe06660;
+  z-index: 5;
+}
+
+/* Bouquet main wrapper para centrar todo */
+.bouquet-main-wrapper {
+  position: relative;
+  width: 360px;
+  height: 420px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bouquet-flowers {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 10px;
+  top: 0;
+  pointer-events: none;
+}
+
+/* Envoltorio de papel */
+.bouquet-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  transform: translateX(-50%) translateY(30px);
+  z-index: 10;
+  pointer-events: none;
+}
+.wrap-paper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(120deg, #f7e7b6 60%, #e6c98f 100%);
+  border-radius: 60% 60% 120% 120% / 80% 80% 100% 100%;
+  box-shadow: 0 8px 32px 0 #bfa10040;
+  opacity: 0.92;
+  z-index: 10;
+}
+.wrap-paper2 {
+  left: 10px;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(100deg, #f7e7b6 60%, #e6c98f 100%);
+  opacity: 0.85;
+  z-index: 11;
+}
+
+/* Moño */
+.wrap-bow {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  width: 60px;
+  height: 40px;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bow-center {
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at 60% 40%, #e94e77 10%, #c72c41 90%);
+  border-radius: 50%;
+  z-index: 22;
+  box-shadow: 0 2px 8px #c72c4180;
+}
+.bow-left, .bow-right {
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at 60% 40%, #e94e77 10%, #c72c41 90%);
+  border-radius: 50% 60% 60% 50% / 60% 80% 80% 60%;
+  position: absolute;
+  top: 8px;
+  z-index: 21;
+}
+.bow-left {
+  left: -16px;
+  transform: rotate(-30deg);
+}
+.bow-right {
+  right: -16px;
+  transform: rotate(30deg);
+}
+.bow-string {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 6px;
+  height: 24px;
+  background: linear-gradient(180deg, #e94e77 60%, #c72c41 100%);
+  border-radius: 8px;
+  transform: translateX(-50%);
+  z-index: 19;
+}
+
+/* Rosa individual con tallo realista */
+.rose-flower-container.single {
+  position: relative;
+  width: 220px;
+  height: 420px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: none;
+}
+.rose-shadow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 100px;
+  height: 28px;
+  background: radial-gradient(ellipse at center, #bfa10040 0%, #fff0 80%);
+  border-radius: 50%;
+  transform: translateX(-50%) scaleX(1.1);
+  z-index: 0;
+  filter: blur(4px);
+}
+.rose-stem-realistic {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 22px;
+  height: 260px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.rose-stem-main {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 10px;
+  height: 260px;
+  background: linear-gradient(180deg, #6b8e23 60%, #3e5c13 100%);
+  border-radius: 8px 8px 18px 18px / 8px 8px 30px 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px 0 #3e5c1340;
+}
+.rose-stem-thorn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid #3e5c13;
+  z-index: 2;
+}
+.thorn-1 {
+  left: 60%;
+  bottom: 120px;
+  transform: rotate(-18deg);
+}
+.thorn-2 {
+  left: 10%;
+  bottom: 60px;
+  transform: rotate(18deg);
+}
+.rose-leaf {
+  position: absolute;
+  width: 38px;
+  height: 22px;
+  background: radial-gradient(ellipse at 60% 40%, #7bb661 60%, #3e5c13 100%);
+  border-radius: 60% 80% 80% 60% / 80% 100% 100% 80%;
+  z-index: 2;
+}
+.leaf-1 {
+  left: 100%;
+  bottom: 90px;
+  transform: rotate(-30deg) skewY(-10deg);
+}
+.leaf-2 {
+  left: -38px;
+  bottom: 160px;
+  transform: rotate(30deg) skewY(10deg) scaleX(-1);
+}
+/* Pétalos y centro: igual que antes */
+
+/* Girasol individual con pétalos ovalados y centro bien centrado */
+.sunflower-single-container {
+  position: relative;
+  width: 240px;
+  height: 400px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: none;
+  animation: sunflower-flower-follow 6s ease-in-out 0.5s infinite alternate;
+  transform-origin: bottom center;
+}
+@keyframes sunflower-flower-follow {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(3deg); }
+  60% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+.sunflower-shadow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 100px;
+  height: 28px;
+  background: radial-gradient(ellipse at center, #bfa10040 0%, #fff0 80%);
+  border-radius: 50%;
+  transform: translateX(-50%) scaleX(1.1);
+  z-index: 0;
+  filter: blur(4px);
+}
+.sunflower-stem-realistic {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 16px;
+  height: 240px;
+  background: linear-gradient(180deg, #7bb661 60%, #3e5c13 100%);
+  border-radius: 8px 8px 18px 18px / 8px 8px 30px 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px 0 #3e5c1340;
+  z-index: 1;
+}
+.sunflower-single-petal {
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  width: 48px;
+  height: 110px;
+  background: linear-gradient(180deg, #fffde4 0%, #ffe066 40%, #ffd700 70%, #ffb300 90%, #ffb347 100%);
+  /* Punta redondeada, curva suave desde la mitad hasta la punta */
+  clip-path: path('M24 0 C44 40 44 70 24 90 Q32 105 24 110 Q16 105 24 90 C4 70 4 40 24 0 Z');
+  box-shadow: 0 4px 16px 0 #bfa10040;
+  z-index: 2;
+  opacity: 0.97;
+  filter: drop-shadow(0 2px 8px #bfa10060);
+  transform-origin: 50% 90%;
+  border: 2.2px solid #bfa76a;
+}
+.sunflower-single-petal-1 { transform: translate(-50%, -50%) rotate(0deg) scale(1, 1.1); }
+.sunflower-single-petal-2 { transform: translate(-50%, -50%) rotate(18deg) scale(1, 1.1); }
+.sunflower-single-petal-3 { transform: translate(-50%, -50%) rotate(36deg) scale(1, 1.1); }
+.sunflower-single-petal-4 { transform: translate(-50%, -50%) rotate(54deg) scale(1, 1.1); }
+.sunflower-single-petal-5 { transform: translate(-50%, -50%) rotate(72deg) scale(1, 1.1); }
+.sunflower-single-petal-6 { transform: translate(-50%, -50%) rotate(90deg) scale(1, 1.1); }
+.sunflower-single-petal-7 { transform: translate(-50%, -50%) rotate(108deg) scale(1, 1.1); }
+.sunflower-single-petal-8 { transform: translate(-50%, -50%) rotate(126deg) scale(1, 1.1); }
+.sunflower-single-petal-9 { transform: translate(-50%, -50%) rotate(144deg) scale(1, 1.1); }
+.sunflower-single-petal-10 { transform: translate(-50%, -50%) rotate(162deg) scale(1, 1.1); }
+.sunflower-single-petal-11 { transform: translate(-50%, -50%) rotate(180deg) scale(1, 1.1); }
+.sunflower-single-petal-12 { transform: translate(-50%, -50%) rotate(198deg) scale(1, 1.1); }
+.sunflower-single-petal-13 { transform: translate(-50%, -50%) rotate(216deg) scale(1, 1.1); }
+.sunflower-single-petal-14 { transform: translate(-50%, -50%) rotate(234deg) scale(1, 1.1); }
+.sunflower-single-petal-15 { transform: translate(-50%, -50%) rotate(252deg) scale(1, 1.1); }
+.sunflower-single-petal-16 { transform: translate(-50%, -50%) rotate(270deg) scale(1, 1.1); }
+.sunflower-single-petal-17 { transform: translate(-50%, -50%) rotate(288deg) scale(1, 1.1); }
+.sunflower-single-petal-18 { transform: translate(-50%, -50%) rotate(306deg) scale(1, 1.1); }
+.sunflower-single-petal-19 { transform: translate(-50%, -50%) rotate(324deg) scale(1, 1.1); }
+.sunflower-single-petal-20 { transform: translate(-50%, -50%) rotate(342deg) scale(1, 1.1); }
+.sunflower-single-center {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 60% 40%, #a67c2e 10%, #6b4f1d 80%, #3e2a0f 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px 0 #a67c2e80;
+  z-index: 4;
+  border: 2px solid #ffe066cc;
+}
+.sunflower-single-inner {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(circle at 60% 40%, #ffe066 10%, #a67c2e 80%, #6b4f1d 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px 0 #ffe06660;
+  z-index: 5;
+}
+.sunflower-single-flower {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 180px;
+  height: 220px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Animaciones para el overlay, césped y flores */
+.sunflower-single-container,
+.sunflower-animated-group {
+  transition: transform 0.9s cubic-bezier(.7,1.7,.5,1), opacity 0.7s;
+  transform: scaleY(0);
+  opacity: 0;
+}
+.sunflower-grow {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.grass-strip {
+  transition: transform 0.8s cubic-bezier(.7,1.7,.5,1), opacity 0.7s;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: bottom;
+}
+.grass-grow {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.fade-black-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.9s;
+}
+.fade-black-overlay.fade-in {
+  opacity: 1;
+}
+.fade-black-overlay.fade-out {
+  opacity: 0;
+}
+
+/* Animaciones para el tallo y la flor, con delays para simular el efecto de crecimiento y bloom */
+.sunflower-stem-anim {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.7s cubic-bezier(.7,1.7,.5,1);
+}
+.sunflower-stem-grow {
+  transform: scaleY(1);
+  transition-delay: 0.1s;
+}
+.sunflower-flower-anim {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.7);
+  transition: opacity 0.4s 0.6s, transform 0.5s 0.6s cubic-bezier(.7,1.7,.5,1);
+}
+.sunflower-flower-bloom {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}

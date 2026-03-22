@@ -1,0 +1,12 @@
+.grass-strip {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 80px;
+  z-index: 10;
+  pointer-events: none;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
