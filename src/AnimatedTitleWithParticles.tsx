@@ -78,7 +78,7 @@ const AnimatedTitleWithParticles: React.FC = () => {
           fontWeight: 700,
           letterSpacing: "1.2px"
         }}>
-          Ya firmaste, ¡nos casamos!
+          Ya firmaste, <br/>¡nos casamos!
         </div>
       )}
       {/* Partículas animadas sobre el texto */}
